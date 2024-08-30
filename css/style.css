@@ -822,6 +822,28 @@ backgrounds
   -webkit-backdrop-filter: invert(100%);
           backdrop-filter: invert(100%);
 }
+.mil-grey-bg {
+  position: relative;
+}
+.mil-grey-bg:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+  background-color: #F5F5F5;
+}
+.mil-grey-bg .mi-invert-fix {
+  height: 100%;
+  position: relative;
+  pointer-events: none;
+  z-index: 3;
+}
+.mil-grey-bg .mi-invert-fix .container {
+  pointer-events: all;
+}
+
 .mil-dark-bg .mi-invert-fix {
   height: 100%;
   position: relative;
@@ -1241,7 +1263,7 @@ frame
     color: rgb(255, 255, 255);
   }
   .mil-frame .mil-frame-top .mil-menu-btn span, .mil-frame .mil-frame-top .mil-menu-btn span:after, .mil-frame .mil-frame-top .mil-menu-btn span:before {
-    background: rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
   }
 }
 .mil-frame .mil-frame-bottom {
@@ -1982,7 +2004,7 @@ dodecahedron
   right: 100px;
 }
 .mil-position-1 .mil-pentagon div {
-  border-top: 0.1px solid rgb(255, 255, 255);
+  border-top: 0.1px solid rgb(0, 0, 0);
 }
 
 .mil-position-2 {
@@ -1990,7 +2012,7 @@ dodecahedron
   left: 15%;
 }
 .mil-position-2 .mil-pentagon div {
-  border-top: 1px solid rgb(255, 255, 255);
+  border-top: 1px solid rgb(0, 0, 0);
 }
 .mil-position-2 .mil-dodecahedron {
   -webkit-animation-delay: 0.5s;
@@ -2007,7 +2029,7 @@ dodecahedron
   right: 35%;
 }
 .mil-position-3 .mil-pentagon div {
-  border-top: 1px solid rgb(255, 255, 255);
+  border-top: 1px solid rgb(0, 0, 0);
 }
 .mil-position-3 .mil-dodecahedron {
   -webkit-animation-delay: 1s;
