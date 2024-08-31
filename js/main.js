@@ -1050,3 +1050,35 @@ $(function () {
     });
 
 });
+
+window.addEventListener('scroll', function() {
+    const circle = document.querySelector('.mil-circle');
+    const scrollPosition = window.scrollY;
+    
+    const maxScroll = 1000;
+    
+    const minSize = 10;
+    const maxSize = 200;
+    
+    const scrollFactor = Math.min(scrollPosition / maxScroll, 1);
+    const newSize = maxSize - scrollFactor * (maxSize - minSize);
+    
+    circle.style.width = newSize + 'px';
+    circle.style.height = newSize + 'px';
+  });
+  
+  window.addEventListener('scroll', function() {
+    const circle = document.querySelector('.mil-square');
+    const scrollPosition = window.scrollY;
+    
+    const maxScroll = 1000;
+    
+    const minSize = 10;
+    const maxSize = 200;
+    
+    const scrollFactor = Math.min(scrollPosition / maxScroll, 1);
+    const newSize = maxSize - scrollFactor * (maxSize - minSize);
+    
+    circle.style.width = newSize + 'px';
+    circle.style.height = newSize + 'px';
+  });
