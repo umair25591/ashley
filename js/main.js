@@ -1082,3 +1082,23 @@ window.addEventListener('scroll', function() {
     circle.style.width = newSize + 'px';
     circle.style.height = newSize + 'px';
   });
+
+
+  $(document).ready(function() {
+    // Toggle the dropdown menu on button click
+    $(".dropdown-toggle").click(function() {
+        $(".dropdown-menu").toggle();
+    });
+
+    // Hide the dropdown menu when clicking outside of it
+    $(document).click(function(event) {
+        if (!$(event.target).closest(".dropdown").length) {
+            $(".dropdown-menu").hide();
+        }
+    });
+
+    // Close the dropdown menu when clicking on an item
+    $(".dropdown-item").click(function() {
+        $(".dropdown-menu").hide();
+    });
+});
